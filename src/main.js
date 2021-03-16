@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import cardApp from './components/App.js';
 import App from './components/App.js';
 
@@ -50,3 +51,8 @@ for(let i = 0; i < object.length; i++){
 
   
 
+=======
+import App from './components/App.js';
+
+document.getElementById('root').appendChild(App());
+>>>>>>> da1e8cd97483b46d3ac6e16e0c72c959c84ae652
