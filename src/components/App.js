@@ -38,7 +38,6 @@ const CreateCard  = (quantityCard, level) =>{
     img.setAttribute("id", quantityCard[i].id);
     img.setAttribute("class", "card");   
     img.addEventListener("click", ()=> FlipCard(quantityCard, img));
-    
     card.push(img); //lleno el array a mostrar
    
     contador= contador+1;
