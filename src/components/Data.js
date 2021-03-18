@@ -3,7 +3,7 @@ const data = () =>{
     fetch('./data/pokemon/pokemon.json')
     .then(resp => resp.json()).then(data => {
     
-      localStorage.setItem('data',JSON.stringify(data.items)); //guardo la data en localstorage
+      localStorage.setItem('data', JSON.stringify(data.items)); //guardo la data en localstorage
     
     }).catch(error => console.log(error));
 

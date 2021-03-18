@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import cardApp from './components/App.js';
 import App from './components/App.js';
 
@@ -20,22 +19,25 @@ ashButton.addEventListener("click", () =>{
     
     lobby.classList.remove('show'); //bienvenida
     lobby.classList.add('hidden');
-
-  
-
-    document.querySelector('.body').setAttribute("style", "background-image: url('img/fondo.png')");
-
+    document.querySelector('body').setAttribute("style", "background-image: url('img/fondo.png')");
 
 });
 mistyButton.addEventListener("click", () =>{ 
     // document.getElementById("lobby").style.display = "none";
     // document.querySelector("instructions").style.display = "inline";
-    document.querySelector('.body').setAttribute("style", "background-image: url('img/fondo.png')");
+
+    instructions.classList.add('show');
+    instructions.classList.remove('hidden');//menu y juego
+    
+    lobby.classList.remove('show'); //bienvenida
+    lobby.classList.add('hidden');
+    document.querySelector('body').setAttribute("style", "background-image: url('img/fondo.png')");
+
 });
 
 
 let card = App(level);
-for(let i = 0; i < object.length; i++){
+for(let i = 0; i < card.length; i++){
 
 
     document.getElementById('memory').appendChild(card[i]);
@@ -51,8 +53,3 @@ for(let i = 0; i < object.length; i++){
 
   
 
-=======
-import App from './components/App.js';
-
-document.getElementById('root').appendChild(App());
->>>>>>> da1e8cd97483b46d3ac6e16e0c72c959c84ae652
