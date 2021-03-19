@@ -19,7 +19,7 @@ ashButton.addEventListener("click", () =>{
     
     lobby.classList.remove('show'); //bienvenida
     lobby.classList.add('hidden');
-    document.querySelector('body').setAttribute("style", "background-image: url('img/fondo.png')");
+    document.querySelector('.body').setAttribute("style", "background-image: url('img/fondo.png')");
 
 });
 mistyButton.addEventListener("click", () =>{ 
@@ -31,7 +31,7 @@ mistyButton.addEventListener("click", () =>{
     
     lobby.classList.remove('show'); //bienvenida
     lobby.classList.add('hidden');
-    document.querySelector('body').setAttribute("style", "background-image: url('img/fondo.png')");
+    document.querySelector('.body').setAttribute("style", "background-image: url('img/fondo.png')");
 
 });
 
