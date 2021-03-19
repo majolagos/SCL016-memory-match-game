@@ -5,8 +5,8 @@ import Data from './Data.js';
   const card = []; //array a mostrar en pantalla
   const quantityCard = []; //array con cantidad de cartas segun nivel para luego mezclar
   let data = Data(); //traido la data del componente Data
-  const cardsChosen = []; //carta elegida
-  const cardsChosenId = []; //id carta elegida
+  let cardsChosen = []; //carta elegida
+  let cardsChosenId = []; //id carta elegida
 
   const cardApp = (levelSelect) => { //funcion del juego
   let level = levelSelect;
@@ -43,28 +43,35 @@ const FlipCard = (quantityCard, img) =>{
 
   let cardId = img.id; //id de la carta
   cardsChosen.push(quantityCard[cardId].id); //se agrega la carta al array
+  cardsChosenId.push(img.id); //se agrega el id de la carta al array
+
   img.setAttribute("src", quantityCard[cardId].image); //front
   
   console.log(cardsChosen);
-    
-  if(cardsChosen.length === 2){ //si hay dos cartas...
+  console.log(cardsChosenId);
+  
+  let timer = setTimeout( ()=>{
+     if(cardsChosen.length === 2){ //si hay dos cartas...
 
-    let result = MatchCard(cardsChosen); //compara las cartas
-
-
-    if(result){ //si son iguales
-          img.setAttribute("src", quantityCard[cardId].image); //mantiene imagen front          
-      }else{ // muestra imagen back
-          img.setAttribute("src", "../img/carta2.png"); //falta dar vuelta las dos cartas
+      let result = MatchCard(cardsChosen); //compara las cartas
+      console.log(result);
+      if(!result){ //si no son iguales
+        for (let i = 0; i < cardsChosenId.length; i++){ //recorro array con cartas dadas vuelta
+          let card = document.getElementById(cardsChosenId[i]);
+          card.setAttribute("src", "../img/carta2.png"); //back     
+        }
+        
       }
-    }else{// muestra imagen back
-      img.setAttribute("src", "../img/carta2.png");
-    }
 
+      cardsChosen = [];
+      cardsChosenId = [];
+
+    }
+  }, 2000 );
+
+ 
 }   
 
 const MatchCard = (cardsChosen) => cardsChosen[0] === cardsChosen[1] ? true : false;
-
-
 
 export default cardApp;
