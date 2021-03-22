@@ -11,11 +11,8 @@ import Data from './Data.js';
   const cardApp = (levelSelect) => { //funcion del juego
   let level = levelSelect;
 
-    quantityCard.push(...data.slice(0,level),...data.slice(0,level));
-    
-    // for(let i = 0; i<level; i++){ //obtengo la cantidad de cartas
-    //   quantityCard.push({id: data[i].id, image: data[i].image, bgColor: data[i].bgColor},{id: data[i].id, image: data[i].image, bgColor: data[i].bgColor});
-    // }
+    quantityCard.push(...data.slice(0,level),...data.slice(0,level)); //data duplicada segun nivel elegido por el usuario
+  
     CreateCard(quantityCard);
 
     return card; //retorno el nuevo array con la data
@@ -29,7 +26,6 @@ const CreateCard  = (quantityCard) =>{
     const img = document.createElement('img'); //creo div de la carta
     img.setAttribute("src", "../img/carta2.png"); //back
     img.setAttribute("id", i);
-    img.setAttribute("name", quantityCard[i].id);
     img.setAttribute("class", "card");   
     img.addEventListener("click", ()=> FlipCard(quantityCard, img));
     card.push(img); //lleno el array a mostrar
@@ -40,38 +36,43 @@ const CreateCard  = (quantityCard) =>{
 
 const FlipCard = (quantityCard, img) =>{
 
-
   let cardId = img.id; //id de la carta
-  cardsChosen.push(quantityCard[cardId].id); //se agrega la carta al array
+  cardsChosen.push(quantityCard[cardId].id); //se agrega la carta al array (nombre del pokemon)
   cardsChosenId.push(img.id); //se agrega el id de la carta al array
 
-  img.setAttribute("src", quantityCard[cardId].image); //front
+  console.log(img.id);
+  img.setAttribute("src", quantityCard[cardId].image); //imagen front
   
   console.log(cardsChosen);
   console.log(cardsChosenId);
-  
-  let timer = setTimeout( ()=>{
-     if(cardsChosen.length === 2){ //si hay dos cartas...
 
-      let result = MatchCard(cardsChosen); //compara las cartas
-      console.log(result);
-      if(!result){ //si no son iguales
-        for (let i = 0; i < cardsChosenId.length; i++){ //recorro array con cartas dadas vuelta
+  if(cardsChosen.length === 2){ //si hay dos cartas...
+    let result = MatchCard(cardsChosen); //compara las cartas
+
+     localStorage.setItem('array',JSON.stringify(cardsChosenId)); //guardo la data en localstorage
+    if(!result){ //si no son iguales
+      
+     setTimeout( ()=>{    
+
+     let cardsChosenId = JSON.parse(localStorage.getItem('array')); //recupero la data del localstorage
+
+        for(let i = 0; i < cardsChosenId.length; i++){ //recorro array con cartas dadas vuelta
           let card = document.getElementById(cardsChosenId[i]);
           card.setAttribute("src", "../img/carta2.png"); //back     
         }
         
-      }
+   
+  }, 1000 );
+}
 
-      cardsChosen = [];
-      cardsChosenId = [];
-
-    }
-  }, 2000 );
+  cardsChosen = [];
+  cardsChosenId = [];
+}
 
  
 }   
 
 const MatchCard = (cardsChosen) => cardsChosen[0] === cardsChosen[1] ? true : false;
+//no hacer clic en la misma carta
 
 export default cardApp;
