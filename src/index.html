@@ -1,93 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Memory Match</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" type="image/jpg" href="img/logo2.png"/>
-  </head>
-  <body class="body">
 
-      <section class="lobby show">
- 
-          <div class="ventana-principal">
-          <img src="img/logo.png" value="logo">
-         
-          <h1>¡Bienvenido/a!</h1>
-          <p>Para comenzar, ingresa tu nombre y selecciona tu entrenador:</p>
-    
-          <br>
-    
-          <input type="text" id="userName" placeholder=" Nombre de usuario">
-          
-          <br> <br>
-    
+<head>
+  <meta charset="utf-8">
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="memory.css">
+  <link rel="stylesheet" href="lobby.css">
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/jpg" href="img/logo3.png" />
+</head>
 
-          <button id="btn1"></button>
-          <button id="btn2"></button>
-         
-            <!-- <input type="button" id="btn1" alt="btn1" src="img/misty.jpg" />
-            <input type="button" id="btn2" alt="btn2" src="img/ash-ketchum-pokemon-espada-escudo-sword-shield.jpg" /> -->
-          
-     
-          </div>
+<body class="body">
+
+  <section class="lobby show">
+    <div class="ventana-principal">
+      <img src="img/logo3.png" value="logo">
+      <h1>¡Bienvenido/a!</h1>
+      <p>Para comenzar, ingresa tu nombre y selecciona tu entrenador:</p>
+      <br>
+
+      <input type="text" id="userName" placeholder="Nombre de usuario">
+      <br> <br>
+      <button id="btn1"></button>
+      <button id="btn2"></button>
   
+    </div>
+  </section>
+
+  <section class="instructions hidden">
+
+    <nav class="navbar">
+      <ul>
+
+        <li>
+          <a href="/"><img class="navbar-home" src="img/home.png"></a>
+        </li>
+
+        <li>
+          <a href="#" class="navbar-ancla">Jugar</a>
+        </li>
+
+        <a href="#"><img class="navbar-logo" src="img/logo3.png" alt="logo"></a>
+
+        <li>
+          <a class="navbar-ancla" href="pokedex.html">Pokedex</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <main class="main">
+      <aside class="aside">
+        <h1 id="user"></h1>
+        <h3>Tu puntaje es: <span id="score"></span></h3>
+        <img src="" class="trainer" alt="entrenador">
+        <img alt="win" src="img/win.png" class="win hidden">
+
+      </aside>
+
+      <section class="app">
+        <div id="memory" class="memory"></div>
+
       </section>
-   
 
-
-      <section class="instructions hidden">
-
-      <nav class="navbar">
-        <ul>
-
-          <li>
-            <a href="#"><img class="navbar-home" src="img/home.png"></a>
-          </li>
-    
-          <li>
-            <a href="instrucciones.html" class="navbar-ancla" >Instrucciones</a>  
-          </li>
-          
-          <li>
-            <a href="#" class="navbar-ancla" >Jugar</a>
-          </li>
-          
-            <a href="#"><img class="navbar-logo" src="img/logo2.png" alt="logo"></a>
-          
-          <li>
-            <a class="navbar-ancla" href="pokedex.html">Pokedex</a>
-          </li>
-          <li>
-            <a class="navbar-ancla" href="comunidad.html">Comunidad</a>
-          </li>
-        </ul>
-      </nav>
-  
-      <main class="main">
-
-      
-        <div id="memory" class="memory">
-
-        </div>
-  
-      </main>
+    </main>
 
     <footer>
       <div class="footer-texto">
         <!-- Copyright -->
         <p class="texto"> ©2021 Copyright - Desarrollado por:<a href="#"></a></p>
-  
-  
+
+
         <!-- Copyright -->
       </div>
     </footer>
 
-      </section>
-    
-    <script src="main.js" type="module"></script>
-    
-  </body>
+  </section>
+
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>

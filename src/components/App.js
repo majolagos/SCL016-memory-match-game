@@ -7,7 +7,6 @@ import Data from './Data.js';
   let data = Data(); //traido la data del componente Data
   let cardsChosen = []; //carta elegida
   let cardsChosenId = []; //id carta elegida
-  let cardMatch = []; // guardar el nombre y luego buscar if...
   let score = 0;
   
   document.getElementById('score').textContent = score;
@@ -30,6 +29,8 @@ const CreateCard  = () =>{ //se crean las tarjetas
     img.addEventListener("click", ()=> FlipCard(img.id));
     card.push(img); //lleno el array a mostrar
 
+  
+
     } 
   card.sort(()=>0.5-Math.random()); //mezclo las cartas}
 }
@@ -45,18 +46,26 @@ const FlipCard = (idCard) =>{ // voltear las tarjetas
   img.setAttribute("src", quantityCard[idCard].image); //imagen front
   
   if(cardsChosen.length === 2){ //si hay dos cartas... //aqui validar si es la misma carta
-    MatchCard();
+    let img1 = document.getElementById(cardsChosenId[0]);
+    let img2 = document.getElementById(cardsChosenId[1]);
+    
+    MatchCard(img1, img2);
 
     document.getElementById('score').textContent = score;
+    if(score === quantityCard.length){
+           
+      document.querySelector(".win").classList.add('show');
+      document.querySelector(".win").classList.remove('hidden'); 
+      document.querySelector(".trainer").classList.add('hidden');
+      document.querySelector(".trainer").classList.remove('show'); 
+      
+    }
    
   }
 
 }   
 
-const MatchCard = () => {
-
-  let img1 = document.getElementById(cardsChosenId[0]); //pasar como parametros
-  let img2 = document.getElementById(cardsChosenId[1]);
+const MatchCard = (img1,img2) => {
 
   if(cardsChosenId[0] === cardsChosenId[1]){
     console.log("es la misma carta!, mejorar esto luego");
@@ -70,7 +79,7 @@ const MatchCard = () => {
     cardsChosenId = [];
     score = score + 2;
   }else{
-    let id= cardsChosenId[0];
+   
     console.log("No son iguales!");
     cardsChosen = [];
     cardsChosenId = [];
@@ -83,3 +92,4 @@ const MatchCard = () => {
 }
 
 export default cardApp;
+
