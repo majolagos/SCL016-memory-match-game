@@ -14,7 +14,7 @@
 
 ## 1. Introducción al proyecto
 
-**Memory Pokémon** es una página enfocada en el mundo de *pokémon*. En este proyecto, encontrarás un pantalla principal donde, podrás poner tu nombre, elegir un entrenador y entrar al juego *memorice*. Este juego consta de  cartas dise{adas con el tema de una **pokeball**, la cual al hacer "click" sobre ella, se volteará y aparecerá un pokémon ¡ Debes buscar su dupla y obtener la mejor puntuación !. También, contrarás una breve pokédex donde se muestra la imágen de cada uno de los pokémon que están presentes en el juego del *memory match game*.
+**Memory Pokémon** es una página enfocada en el mundo de *pokémon*. En este proyecto, encontrarás un pantalla principal donde, podrás poner tu nombre, elegir un entrenador y entrar al juego *memorice*. Este juego consta de  cartas dise{adas con el tema de una **pokeball**, la cual al hacer "click" sobre ella, se volteará y aparecerá un pokémon **¡Debes buscar su dupla y obtener la mejor puntuación!**. También, contrarás una breve pokédex donde se muestra la imágen de cada uno de los pokémon que están presentes en el juego del *memory match game*.
 
 ![Memory pokemon](src/img/memory-pokemon.png)
 
@@ -24,7 +24,7 @@ El usuario al cuál va dirigido nuestro proyecto, comprende dentro del rango de 
 
 !![Diego usuario](src/img/Diego.png)
 
-## 3. Portotipo del proyecto
+## 3. Prototipo del proyecto
 
 En el siguiente link podrás encontrar el prototipo del proyecto en forma digital, el cual se basó en las necesidades del usuario al momento de realizar las encuestas y entrevistas pertinentes.
 
@@ -39,8 +39,8 @@ El entrar a la página, encontrarás una pantalla principal donde se dará la bi
 
 Podrás encontrar la página directamente desde estos enlaces:
 
-* [Proyecto Marjorie L.](https://github.com/majolagos/SCL016-memory-match-game).
-* [Proyecto Sofia B.](https://github.com/SofiBenavente/SCL016-memory-match-game).
+* [Proyecto Marjorie L](https://github.com/majolagos/SCL016-memory-match-game).
+* [Proyecto Sofia B](https://github.com/SofiBenavente/SCL016-memory-match-game).
 
 O bien, en el siguiente link directo: [MemoryPokémon](https://github.com/majolagos/SCL016-memory-match-game).
 
@@ -49,7 +49,7 @@ O bien, en el siguiente link directo: [MemoryPokémon](https://github.com/majola
 * CSS
 * Html
 * JavaScript
-* Node.js (para hacer pruebas en npm)
+* Node.js 
 * GitBash
 * PowerShell
 
