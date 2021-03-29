@@ -1,6 +1,7 @@
 
 /*corrigiendo la pestaña pokedex*/
 body{
+    margin: 0%;
     background-image: url(img/fondo.png); 
 }
 

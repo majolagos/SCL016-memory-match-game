@@ -1,0 +1,72 @@
+#btn1{
+    background-image: url(img/misty.jpg);
+    width: 190px;
+    height: 190px;
+    border-radius: 30px;  
+    margin-right: 20px;  
+  }
+  #btn1:hover{
+    color: #1883ba;
+    background-color: #1884bad2;
+    display: inline;
+    border-radius: 40px;
+    text-decoration:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+  }
+  #btn2{
+    background-image: url(img/ash-ketchum-pokemon-espada-escudo-sword-shield.jpg);
+    width: 190px;
+    height: 190px;
+    border-radius: 30px;
+  }
+  #btn2:hover{
+    color: #1883ba;
+    background-color: #1884bad2;
+    display: inline;
+    border-radius: 40px;
+    text-decoration:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:5px;
+    padding-right:5px;
+  }
+  /* Contiene pantalla principal*/
+  .ventana-principal {
+      background-color: #344d93a1; /* le da transparencia y asi no tengo que utilizar el opacity */
+      width: 700px;
+      height: 100vh;
+      margin-left: 450px;
+  }
+  /*Cambiar letra y color*/
+  h1{
+    color: white;
+  }
+  
+  p{
+    font-size:100%;
+    color: white;
+  }
+  /* Modificar cuadro de input*/
+  
+  #userName{
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .lobby{
+
+    text-align: center;
+    font-family: calibri;
+  }
+  
+  
+   /* personalizando botones*/
+  
+   .btn{
+     margin-top: 50px;
+    } 
+  /* botón misty y hover */
