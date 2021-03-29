@@ -42,7 +42,7 @@ Podrás encontrar la página directamente desde estos enlaces:
 * [Proyecto Marjorie L.](https://github.com/majolagos/SCL016-memory-match-game).
 * [Proyecto Sofia B.](https://github.com/SofiBenavente/SCL016-memory-match-game).
 
-O bien, en el siguiente link directo: [MemoryPokémon](https://github.com/majolagos/SCL016-memory-match-game).
+O bien, en el siguiente link directo: [MemoryPokémon](https://majolagos.github.io/SCL016-memory-match-game/src/index.html).
 
 ## 6. Herramientas que se utilizaron para realizar el proyecto
 
